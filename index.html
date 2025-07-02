@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Colorful Animated Website</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background: #fdfbfb;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(90deg, #ff6ec4, #7873f5);
+      padding: 20px 40px;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+    }
+
+    nav a {
+      margin-left: 20px;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffefba;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #f6d365, #fda085);
+      text-align: center;
+      padding: 100px 20px;
+      color: #333;
+      animation: fadeIn 1.5s ease-in;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 30px;
+      background: #ff6ec4;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: transform 0.3s, background 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      background: #ff9de2;
+    }
+
+    section.container {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      text-align: center;
+      color: #7873f5;
+      margin-bottom: 30px;
+      position: relative;
+    }
+
+    .cards {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      animation: slideUp 1s ease-in;
+    }
+
+    .card {
+      background: linear-gradient(145deg, #ffffff, #e6e6e6);
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      padding: 25px;
+      flex: 1 1 250px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    footer {
+      background: linear-gradient(90deg, #43cea2, #185a9d);
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 60px;
+    }
+
+    footer a {
+      color: #ffd700;
+      text-decoration: none;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero h2 {
+        font-size: 2rem;
+      }
+
+      .cards {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>ColorBurst</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Welcome to ColorBurst</h2>
+    <p>Bright, bold, and beautifully animated websites — built with only HTML and CSS.</p>
+    <a href="#services" class="btn">Explore Services</a>
+  </section>
+
+  <section class="container" id="about">
+    <h3 class="section-title">About Us</h3>
+    <p style="text-align: center;">
+      We're a creative team designing vibrant, animated websites with zero JavaScript — just the magic of HTML & CSS.
+    </p>
+  </section>
+
+  <section class="container" id="services">
+    <h3 class="section-title">Our Services</h3>
+    <div class="cards">
+      <div class="card">
+        <h4>Design</h4>
+        <p>Custom, modern, and mobile-friendly layouts with unique flair.</p>
+      </div>
+      <div class="card">
+        <h4>Development</h4>
+        <p>Hand-coded with clean, semantic HTML and stylish CSS animations.</p>
+      </div>nkm,
+      <div class="card">
+        <h4>Branding</h4>
+        <p>Bring your identity to life with bold colors and sleek design.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <p>Contact us at <a href="mailto:hello@colorburst.com">hello@colorburst.com</a></p>
+    <p>&copy; 2025 ColorBurst. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
